@@ -1,0 +1,84 @@
+.balloon {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%
+}
+
+.ropes {
+  position: relative;
+  padding: 15px;
+  width: 80px;
+}
+
+.ropes:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 30%;
+  background: #696969;
+  transform: skew(0deg, -56deg);
+}
+
+.ropes:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 10%;
+  width: 30%;
+  background: #696969;
+  transform: skew(0deg, 55deg);
+}
+
+.attaching-rope-left {
+  height:50px;
+  position:relative;
+}
+
+.attaching-rope-left:after {
+    content: "";
+    position: absolute;
+    border-top: 2px solid black;
+    width: 55px;
+    transform: rotate(-56deg);
+    transform-origin: 0% 0%;
+}
+
+.attaching-rope-right {
+  height:50px;
+  position:relative;
+}
+
+.attaching-rope-right:after {
+    content: "";
+    position: absolute;
+    border-top: 2px solid black;
+    width: 55px;
+    transform: rotate(56deg);
+    transform-origin: 0% 0%;
+}
+
+
+.basket {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.basket-top{
+    background-color: #8B4513;
+    border-radius: 10px;
+    min-height: 40px;
+    width: 140px;
+}
+
+.basket-body{
+    background-color: #8B4513;
+    border-radius: 0% 0% 20% 20%;
+    min-height: 100px;
+    width: 100px;
+}
