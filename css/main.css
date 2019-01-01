@@ -1,8 +1,16 @@
+
 .balloon {
+  content: '';
   width: 100px;
   height: 100px;
   background: red;
   border-radius: 50%
+}
+
+.balloon:after {
+	content: '';
+	border: 40px solid transparent;
+	border-top-color: red;
 }
 
 .ropes {
@@ -67,6 +75,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 .basket-top{
