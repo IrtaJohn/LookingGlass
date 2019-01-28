@@ -1,74 +1,61 @@
+body {
+  background: #c9f1f3;
+}
+
+/* Ballon */
 
 .balloon {
-  content: '';
   width: 100px;
   height: 100px;
-  background: red;
-  border-radius: 50%
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(225deg);
+  margin: 10px 0px 29px 0px;
+  background: rgb(123,11,8);
+  z-index:1;
 }
 
-.balloon:after {
-	content: '';
-	border: 40px solid transparent;
-	border-top-color: red;
-}
+
+/* Ropes */
 
 .ropes {
+  display: contents;
+}
+
+.ropes-one, .ropes-two {
   position: relative;
-  padding: 15px;
-  width: 80px;
+  padding: 9px;
 }
+.ropes-one { width: 75px; }
+.ropes-two { width: 50px; }
+.ropes-three { width: 30px; }
 
-.ropes:before {
+.ropes-one:before, .ropes-two:before, .ropes-three:before {
   content: '';
   position: absolute;
-  top: 0;
   left: 0;
-  height: 10%;
-  width: 30%;
+  height: 10px;
+  width: 25px;
   background: #696969;
-  transform: skew(0deg, -56deg);
+  transform: skew(0deg, -70deg);
 }
+.ropes-one:before { top: -2px; }
+.ropes-two:before { top: -11px; }
+.ropes-three:before { top: -11px; }
 
-.ropes:after {
+.ropes-one:after, .ropes-two:after, .ropes-three:after {
   content: '';
   position: absolute;
-  top: 0;
   right: 0;
-  height: 10%;
-  width: 30%;
+  height: 10px;
+  width: 25px;
   background: #696969;
-  transform: skew(0deg, 55deg);
+  transform: skew(0deg, 70deg);
 }
+.ropes-one:after { top: -2; }
+.ropes-two:after { top: -11; }
+.ropes-three:after { top: -11; }
 
-.attaching-rope-left {
-  height:50px;
-  position:relative;
-}
-
-.attaching-rope-left:after {
-    content: "";
-    position: absolute;
-    border-top: 2px solid black;
-    width: 55px;
-    transform: rotate(-56deg);
-    transform-origin: 0% 0%;
-}
-
-.attaching-rope-right {
-  height:50px;
-  position:relative;
-}
-
-.attaching-rope-right:after {
-    content: "";
-    position: absolute;
-    border-top: 2px solid black;
-    width: 55px;
-    transform: rotate(56deg);
-    transform-origin: 0% 0%;
-}
-
+/* Basket */
 
 .basket {
     display: flex;
@@ -80,14 +67,36 @@
 
 .basket-top{
     background-color: #8B4513;
+    box-shadow: 0px 5px 5px -1px rgba(104,52,14,.9);
     border-radius: 10px;
-    min-height: 40px;
-    width: 140px;
+    min-height: 10px;
+    width: 115px;
+    z-index: 1;
 }
 
 .basket-body{
-    background-color: #8B4513;
-    border-radius: 0% 0% 20% 20%;
-    min-height: 100px;
-    width: 100px;
+  display: flex;
+  justify-content: space-between;
+  background: #8B4513;
+  background-image:
+    linear-gradient(45deg, #b9783b 25%, transparent 25%), 
+    linear-gradient(135deg, #b9783b 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #b9783b 75%),
+    linear-gradient(135deg, transparent 75%, #b9783b 75%);
+  background-size:25px 25px; /* Must be a square */
+  background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; /* Must be half of one side of the square */
+  border-radius: 0% 0% 20% 20%;
+  min-height: 80px;
+  width: 100px;
+  z-index: 0;
+}
+
+.basket-weights {
+  width: 17px;
+  height: 17px;
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+  margin-top: 7px;
+  background: #ffffd2;
+  box-shadow: 5px 1px 8px -1px rgba(229,229,189,.9);
 }
