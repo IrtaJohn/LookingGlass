@@ -1,19 +1,50 @@
 body {
   background: #c9f1f3;
+  width: 1000px;
+  display: flex;
+  height: 950px;
+  padding: 50px;
+    
 }
 
 /* Ballon */
 
+
 .balloon {
-  width: 100px;
-  height: 100px;
-  border-radius: 0 50% 50% 50%;
-  transform: rotate(225deg);
-  margin: 10px 0px 29px 0px;
-  background: rgb(123,11,8);
-  z-index:1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -35px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgb(123,11,8),
+    rgb(123,11,8) 40px,
+    rgb(235,225,201) 40px,
+    rgb(235,225,201) 80px
+  );
+  transform: rotate(135deg);
+  margin-bottom: 10px;
+  border-radius: 150%;
+  border-bottom-left-radius: 425%;
+  border-bottom-right-radius: 425%;
+  border-top-left-radius: 425%;
+  border-top-radius: 220%;
+  min-height: 400px;
+  min-width: 400px;
+  z-index: 1;
 }
 
+/*.ballon-part-one, .ballon-part-three, .ballon-part-five, .ballon-part-seven {*/
+/*    background: rgb(123,11,8);*/
+/*    width: 300px;*/
+/*    height: 100px;*/
+/*}*/
+
+/*.ballon-part-two, .ballon-part-four, .ballon-part-six {*/
+/*    background: rgb(235,225,201);*/
+/*    width: 300px;*/
+/*    height: 100px;*/
+/*}*/
 
 /* Ropes */
 
@@ -21,13 +52,13 @@ body {
   display: contents;
 }
 
-.ropes-one, .ropes-two {
+.ropes-one, .ropes-two, .ropes-three {
   position: relative;
-  padding: 9px;
+  padding: 6px;
 }
-.ropes-one { width: 75px; }
-.ropes-two { width: 50px; }
-.ropes-three { width: 30px; }
+.ropes-one { width: 125px; }
+.ropes-two { width: 105px; }
+.ropes-three { width: 75px; }
 
 .ropes-one:before, .ropes-two:before, .ropes-three:before {
   content: '';
@@ -36,7 +67,7 @@ body {
   height: 10px;
   width: 25px;
   background: #696969;
-  transform: skew(0deg, -70deg);
+  transform: skew(0deg, 70deg);
 }
 .ropes-one:before { top: -2px; }
 .ropes-two:before { top: -11px; }
@@ -49,7 +80,7 @@ body {
   height: 10px;
   width: 25px;
   background: #696969;
-  transform: skew(0deg, 70deg);
+  transform: skew(0deg, -70deg);
 }
 .ropes-one:after { top: -2; }
 .ropes-two:after { top: -11; }
@@ -57,7 +88,7 @@ body {
 
 /* Basket */
 
-.basket {
+.wrapper {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -98,5 +129,5 @@ body {
   transform: rotate(45deg);
   margin-top: 7px;
   background: #ffffd2;
-  box-shadow: 5px 1px 8px -1px rgba(229,229,189,.9);
+  box-shadow: 3px 1px 8px 0px rgba(51, 25, 6,.9);
 }
