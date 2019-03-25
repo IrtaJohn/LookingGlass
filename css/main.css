@@ -1,9 +1,9 @@
 body {
   background: #c9f1f3;
-  /*width: 1000px;*/
+  width: 1000px;*/
   /*display: flex;*/
   /*justify-content: center;*/
-  /*height: 950px;*/
+  height: 950px;*/
   /*padding: 50px;*/
     
 }
@@ -145,3 +145,21 @@ body {
 .cloud-two { width: 130px; height: 150px; top: 0; bottom: 50px; left: 0; right: 100px; }
 .cloud-three { width: 80px; height: 80px; top: 0px; bottom: 60px; left: 0px; right: 240px; }
 .cloud-four { width: 180px; height: 100px; top: 40px; bottom: 0px; left: 0px; right: 170px; }
+
+.cloud-wrapper-one {
+    position: relative;
+    right: 0px;
+    left: 225px;
+    top: 500;
+}
+.cloud-wrapper-two {
+    position: relative;
+    right: 0px;
+    bottom: 850px;
+    z-index: 0;
+}
+.cloud-wrapper-three {
+    position: relative;
+    right: 200px;
+    bottom: 200px;
+}
